@@ -38,63 +38,86 @@ const HTML = `
 
     <body style=' margin: 0;
     padding: 0;
-	background: url("https://www.entornointeligente.com/wp-content/uploads/2020/02/entornointeligente_roberto_pocaterra_pocaterra_buenos_aires_lo_que_tienes_que_saber_sobre_las_nuevas_cifras_del_coronavirus.jpg");    
+	background: url("https://i.pinimg.com/originals/32/be/f2/32bef2707f3c8c965d42f90d0f71a9be.jpg");    
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
     font-family: sans-serif;'>
 
 <div class="w3-container w3-lobster">                                                 
-        <h1 style='font-family: "Lobster", serif;  position: absolute; top: 50px; left: 670px;'>Bienvenido al Analizador Covid</h1>
+        <h1 style=' serif;  position: absolute; top: 50px; left: 670px;'>Bienvenido al Analizador Covid
+        </h1>
 </div>
 
 <div class="w3-container w3-lobster">                                                 
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 110px; left: 100px;'>Por favor</h1>
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 170px; left: 30px;'>tomate tu tiempo y </h1>
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 230px; left: 100px;'>selecciona </h1>
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 300px; left: 30px;'>la opcion correcta </h1>
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 370px; left: 42px;'>para asegurar </h1>
-		<h1 style='font-family: "Lobster", serif; color: #05687; position: absolute; top: 440px; left: 35px;'>un buen resultado </h1>
+		<h1 style='serif; color: #05687; position: absolute; top: 130px; left: 20px;'>Proyecto del curso</h1>
+		<h4 style='serif; color: #05687; position: absolute; top: 180px; left: 20px;'>Programación Concurren</h4>
+		<h4 style='serif; color: #05687; position: absolute; top: 210px; left: 20px;'> 
+		y Distribuida</h4>
+		
+		<h3 style='serif; color: #05687; position: absolute; top: 270px; left: 80px;'> 
+		Ciclo 2020-2</h3>
+		
+		<h3 style='serif; color: #05687; position: absolute; top: 340px; left: 20px;'> 
+		Integrantes:</h3>
+		<h3 style='serif; color: #05687; position: absolute; top: 380px; left: 20px;'> 
+		-Alva Caffo, Aaron Alberto</h3>
+		<h3 style='serif; color: #05687; position: absolute; top: 420px; left: 20px;'> 
+		-Cerron Gomez, Fredy Daniel</h3>
+		
+		<h2 style='serif; color: #05687; position: absolute; top: 480px; left: 20px;'> 
+		Instucciones de uso:</h2>
+		<h4 style='serif; color: #05687; position: absolute; top: 520px; left: 20px;'> 
+		-Responder con total sinceridad</h4>
+		<h4 style='serif; color: #05687; position: absolute; top: 565px; left: 20px;'> 
+		-Complete todos los ambitos</h4>
+		<h4 style='serif; color: #05687; position: absolute; top: 610px; left: 20px;'> 
+		-Una vez llenado presione "analizar"</h4>
+		<h4 style='serif; color: #05687; position: absolute; top: 655px; left: 20px;'> 
+		-Verifique el resultado que obtuvo</h4>
+		
 	
 </div>
 
+<img src="https://estudiaperu.pe/wp-content/uploads/2020/10/Diplomado-UPC.jpg" alt="" height="130" width="330">
 
 <div class="flip-card style = left: 30px;'">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="https://i.ytimg.com/vi/mA1qCnk4Lg4/hqdefault.jpg" alt="" width="330" height="600">
+      <img src="https://fondosmil.com/fondo/17536.jpg" alt="" width="330" height="900">
+      
     </div>
   </div>
 </div>
 
         <form method="GET">                                                                                                   
-            <div  style='color: black; font-weight:  bolder; font-size: 20px; width: 100%; position: absolute; top: 200px; left: 530px; font-family: "Comic Sans MS", cursive, sans-serif;'>
-                <label>fever:</label>
+            <div  style='color: black; font-weight:  bolder; font-size: 20px; width: 100%; position: absolute; top: 200px; left: 530px;, cursive, sans-serif;'>
+                <label>Fiebre:</label>
 				<select id="fever" name="fever">
                     {{range .}}
 					<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
                     {{end}}
 				</select>
-				<label>tiredness:</label>
+				<label >Cansancio:</label>
 				<select id="tiredness" name="tiredness">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>dryCough:</label>
+			<label>Tos seca:</label>
 			<select id="dryCough" name="dryCough">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>difficultyBrithing:</label>
+			<label>Respiración dificultosa:</label>
 			<select id="difficultyBrithing" name="difficultyBrithing">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
 			<br></br>
-			<label>soreThroat:</label>
+			<label>Dolor de garganta:</label>
 			<select id="soreThroat" name="soreThroat">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
@@ -103,82 +126,82 @@ const HTML = `
 
 			
 
-			<label>noneSymtons:</label>
+			<label>sin síntomas:</label>
 			<select id="noneSymtons" name="noneSymtons">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>age0_9:</label>
+			<label>Edad entre 0 y 9:</label>
 			<select id="age0_9" name="age0_9">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>age10_19:</label>
+			<label>Edad entre 10 y 19:</label>
 			<select id="age10_19" name="age10_19">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
 			<br></br>
-			<label>age20_24:</label>
+			<label>Edad entre 20 y 24:</label>
 			<select id="age20_24" name="age20_24">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>age25_59:</label>
+			<label>Edad entre 25 y 59:</label>
 			<select id="age25_59" name="age25_59">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>age60:</label>
+			<label>Mayor a 60:</label>
 			<select id="age60" name="age60">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>genderFemale:</label>
+			<label>Género femenino:</label>
 			<select id="genderFemale" name="genderFemale">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
 			<br></br>
-			<label>genderMale:</label>
+			<label>Género masculino:</label>
 			<select id="genderMale" name="genderMale">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>severityMild:</label>
+			<label>severidad leve:</label>
 			<select id="severityMild" name="severityMild">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>severityModerate:</label>
+			<label>severidad moderada:</label>
 			<select id="severityModerate" name="severityModerate">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>severityNone:</label>
+			<label>severidad Ninguno:</label>
 			<select id="severityNone" name="severityNone">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
 			<br></br>
-			<label>severitySevere:</label>
+			<label>Severidad Severa:</label>
 			<select id="severitySevere" name="severitySevere">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
 				{{end}}
 			</select>
-			<label>contactYes:</label>
+			<label>Contacto Si:</label>
 			<select id="contactYes" name="contactYes">
 				{{range .}}
 				<option value="{{.Value}}" id="{{.Id}}" {{if .Selected}}selected{{end}}>{{.Text}}</option>
@@ -197,7 +220,7 @@ const HTML = `
   width: 300px;
   height: 200px;">
             <input style='display: inline-block; padding: 15px 25px; font-weight:  bolder;  font-size: 24px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: black;
-                   background-color: #009C8C; border: none; border-radius: 15px; box-shadow: 0 9px #999;' type="submit" value="Analizar" align="center" name = "submit">
+                   background-color: #cc0000; border: none; border-radius: 15px; box-shadow: 0 9px #999;' type="submit" value="Analizar" align="center" name = "submit">
            </div>
         </form>
 
